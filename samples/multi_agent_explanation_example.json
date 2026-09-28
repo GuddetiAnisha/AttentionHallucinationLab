@@ -1,0 +1,17 @@
+{
+  "scenario": "Two-agent diagnostic workflow",
+  "agents": [
+    {
+      "agent_id": "evidence-agent",
+      "role": "collect evidence",
+      "prompt_summary": "Inspect available observations and identify relevant evidence."
+    },
+    {
+      "agent_id": "diagnosis-agent",
+      "role": "form diagnosis",
+      "prompt_summary": "Use upstream evidence to produce a diagnostic hypothesis."
+    }
+  ],
+  "analysis_goal": "Compare readable internal-token projections between agents and inspect where their internal signals agree or diverge.",
+  "note": "This sample describes the experiment structure only; it does not contain hidden chain-of-thought."
+}
