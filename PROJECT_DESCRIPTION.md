@@ -54,3 +54,10 @@ The project reports accuracy, precision, recall, F1, ROC-AUC where defined, Brie
 ### Scientific limitations
 
 The current implementation provides transparent attention-derived baselines. It does not claim exact reproduction of published SinkProbe or Head Entropy methods, causal interpretation of attention, or generalisation to production telecom systems. Those claims require paper-faithful reproduction, larger datasets, multiple model families, careful annotations, and statistical validation.
+
+
+### Internal explainer extension
+
+The repository also includes `internal_explainer.py`, a lightweight baseline for analysing transformer hidden states. It projects selected hidden-state vectors through the model's output embedding to obtain human-readable top-token summaries. These summaries can be attached to different agent roles and compared using pairwise token-overlap metrics.
+
+This supports small experiments on how an explanation representation for one LLM agent might be compared across multiple agents in a workflow. The method is intentionally simple and should not be described as Jacobian Lens, Natural Language Autoencoders, or formal mechanistic interpretability.
