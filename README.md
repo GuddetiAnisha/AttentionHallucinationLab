@@ -138,3 +138,27 @@ Useful next steps include:
 ## License
 
 MIT.
+
+
+## Internal activation explainer extension for agentic AI
+
+A small internal-activation explanation module has been added to support experiments related to explainable LLM agents and multi-agent systems.
+
+### What it adds
+
+- hidden-state extraction from Hugging Face causal language models
+- readable token projections from selected transformer layers using the model output head
+- per-layer activation norms
+- comparison of top projected tokens between agents
+- pairwise overlap scores for multi-agent explanation comparison
+- a sample two-agent diagnostic workflow
+- automated tests for projection and multi-agent comparison logic
+
+### Important limitation
+
+This extension is a transparent baseline for inspecting hidden states. It is **not** an implementation of Jacobian Lens, Natural Language Autoencoders, or a causal mechanistic-interpretability method. It is intended as a research starting point for studying how single-agent explanation signals could be compared across multiple agents.
+
+### CV-safe description
+
+- Extended AttentionHallucinationLab with a hidden-state explanation module for LLM-based agents using readable token projections from selected transformer layers.
+- Added a multi-agent comparison workflow that measures agreement and divergence between agent-level internal explanations without exposing hidden chain-of-thought.
