@@ -1,0 +1,3 @@
+{"id":"qa-001","task":"qa","context":"Stockholm is the capital of Sweden.","question":"What is the capital of Sweden?","answer":"Stockholm.","label":"correct"}
+{"id":"qa-002","task":"qa","context":"Stockholm is the capital of Sweden.","question":"What is the capital of Sweden?","answer":"Gothenburg.","label":"intrinsic"}
+{"id":"qa-003","task":"qa","context":"Stockholm is the capital of Sweden.","question":"What is the capital of Sweden?","answer":"Stockholm, founded in 1250 by King Erik.","label":"extrinsic"}
