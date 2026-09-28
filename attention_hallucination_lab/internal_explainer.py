@@ -11,7 +11,6 @@ from dataclasses import dataclass
 from typing import Iterable
 
 import numpy as np
-import torch
 
 
 @dataclass
@@ -132,6 +131,7 @@ def extract_hidden_state_explanations(
     transparent projection baseline. It should not be described as J-Lens,
     NLA, or a causal explanation method.
     """
+    import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
