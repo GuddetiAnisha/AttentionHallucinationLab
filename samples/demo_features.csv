@@ -1,0 +1,7 @@
+sink_max_mean,sink_topk_mean_mean,entropy_mean_mean,entropy_min_mean,is_hallucination
+0.11,0.10,0.91,0.81,0
+0.14,0.12,0.88,0.79,0
+0.16,0.14,0.86,0.74,0
+0.58,0.50,0.57,0.43,1
+0.64,0.56,0.49,0.36,1
+0.71,0.62,0.45,0.31,1
