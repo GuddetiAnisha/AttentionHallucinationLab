@@ -1,0 +1,43 @@
+{
+  "dataset": "HaluEval/dialogue",
+  "experiment": "semantic-boosted leakage-aware held-out validation",
+  "n_dialogues": 300,
+  "n_examples": 600,
+  "grouped_holdout": "75/25 by dialogue_id",
+  "cross_validation": {
+    "hybrid_tfidf_logistic": {
+      "roc_auc": 0.838,
+      "accuracy": 0.744
+    },
+    "numeric_logistic": {
+      "roc_auc": 0.833,
+      "accuracy": 0.733
+    },
+    "random_forest": {
+      "roc_auc": 0.854,
+      "accuracy": 0.771
+    },
+    "hist_gradient_boosting": {
+      "roc_auc": 0.838,
+      "accuracy": 0.756
+    }
+  },
+  "selected_classifier": "random_forest",
+  "heldout_metrics": {
+    "accuracy": 0.7,
+    "precision": 0.65,
+    "recall": 0.8666666666666667,
+    "f1": 0.7428571428571429,
+    "brier_score": 0.18956235192310394,
+    "confusion_matrix": [
+      [40, 35],
+      [10, 65]
+    ],
+    "roc_auc": 0.7863111111111111
+  },
+  "notes": [
+    "Correct and hallucinated responses from the same dialogue were kept in the same split.",
+    "Classifier selection used grouped cross-validation on training groups only.",
+    "These are observed benchmark results from the completed run; no 100% accuracy target was enforced."
+  ]
+}
