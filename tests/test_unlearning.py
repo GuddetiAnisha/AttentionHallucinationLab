@@ -42,7 +42,7 @@ def test_counterfactual_summary_and_profile():
 
 
 def test_behavioral_leakage():
-    assert behavioral_leakage([0.1, 0.2, 0.3]) == 0.2
+    assert np.isclose(behavioral_leakage([0.1, 0.2, 0.3]), 0.2)
 
 
 def test_residual_probe_separable_data():
